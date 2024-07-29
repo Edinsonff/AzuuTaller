@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="../public/css/tailwind.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 dark:bg-white landing-page">
+  <!-- Barra de navegación -->
+  <nav class="w-full fixed top-0 z-10 flex justify-between items-center px-4 py-2 bg-gray-900 dark:bg-white shadow-lg">
+    <div class="flex items-center">
+      <img src="../public/img/logo.png" alt="Logo" class="h-12 w-12 mr-2 logo-img">
+      <div class="flex items-baseline">
+        <span class="text-4xl text-white dark:text-black leading-none">Azuu</span>
+        <span class="text-sm text-white dark:text-black ml-1">Taller</span>
+      </div>
+    </div>
+    <div class="flex items-center md:hidden">
+      <button id="toggle" class="mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path class="fill-current text-white dark:text-black" stroke-linecap="round" stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+      </button>
+      <button id="mobile-menu-button" class="text-white hover:text-gray-900 dark:text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden md:flex space-x-4 items-center">
+      <a class="text-md text-white dark:text-black hover:underline" href="nosotros.html" id="nosotros-link">Nosotros</a>
+      <a href="https://wa.me/573232175634?text=¡Hola! Quiero saber mas acerca de Azuu Taller."
+        class="hover:text-gray-900">
+        <img src="https://img.icons8.com/?size=100&id=85088&format=png&color=FFFFFF" alt="WhatsApp"
+          class="h-6 w-6 dark:filter dark:invert">
+      </a>
+      <a href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr"
+        class="hover:text-gray-900">
+        <img src="https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF" alt="Instagram"
+          class="h-7 w-6 dark:filter dark:invert">
+      </a>
+      <button id="toggle" class="text-white dark:text-black hidden md:block">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path class="fill-current" stroke-linecap="round" stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Modal de navegación móvil -->
+  <div id="mobile-menu"
+    class="modal fixed inset-0 bg-gray-900 dark:bg-white bg-opacity-95 z-20 flex flex-col items-start p-4 md:hidden">
+    <div class="flex justify-between items-center w-full mb-4">
+      <p class="text-2xl text-white font-bold dark:text-black">Azuu Taller</p>
+      <button id="close-mobile-menu" class="text-white hover:text-gray-900 dark:text-gray-700 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <a class="block px-4 py-2 text-lg text-white dark:text-black hover:underline" href="nosotros.html"
+      id="nosotros-link">Nosotros</a>
+    <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700"
+      href="https://wa.me/573232175634?text=¡Hola! Quiero saber mas acerca de Azuu Taller."><img
+        src="https://img.icons8.com/?size=100&id=85088&format=png&color=FFFFFF" alt="WhatsApp"
+        class="h-6 w-6 inline dark:filter dark:invert"> WhatsApp</a>
+    <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700"
+      href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr"><img
+        src="https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF" alt="Instagram"
+        class="h-7 w-6 inline dark:filter dark:invert"> Instagram</a>
+  </div>
+
+  <!-- Carrusel de fotos -->
+  <div class="carousel-container max-w-4xl mx-auto max-h-4xl relative text-center mt-5">
+    <div class="carousel-item active">
+      <img src="../public/img/Parque de la salud.png" alt="Salón Social"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text mt-4 text-center">
+        <h2 class="text-base md:text-lg text-white font-bold dark:text-gray-700">Salón social</h2>
+        <p class="text-xs md:text-sm text-white dark:text-gray-600">Totoró, Cauca. Colombia (2021)</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/casa concha.png" alt="Casa Concha"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text mt-4 text-center">
+        <h2 class="text-base md:text-lg text-white font-bold dark:text-gray-600">Casa Concha</h2>
+        <p class="text-xs md:text-sm text-white dark:text-gray-400">Popayán, Cauca. Colombia (2020)</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Patio vivas.png" alt="Patio Vivas"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Patio vivas </h2>
+        <p>Popayán, Cauca. Colombia (2022) </p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/puertas de oro.png" alt="Puertas de Oro"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Puertas de Oro</h2>
+        <p>Totoró, Cauca. Colombia (2022)</p>
+        <p>Equipo: </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/El refugio de los sueños.png" alt="Casa Refugio"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Casa Refugio</h2>
+        <p>Popayán, Cauca. Colombia (2022)</p>
+        <p>Equipo: </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Monteclaro.png" alt="Monteclaro"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Monteclaro </h2>
+        <p>Totoró, Cauca. Colombia (2020)</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Parque de la salud.png" alt="Parque de la salud"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Gran parque de la salud </h2>
+        <p>Tenjo, Cundinamarca. Colombia 2024</p>
+        <p>Equipo: </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Casa tertulia.png" alt="Casa Tertulia"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Casa Tertulia</h2>
+        <p>Popayán, Cauca. Colombia (2021)</p>
+        <p>Equipo: </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Quinta Luna.png" alt="Quinta Luna"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Quinta Luna</h2>
+        <p>Tenjo, Cundinamarca. Colombia (2024)</p>
+        <p>Equipo: </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/pool house.png" alt="Pool House"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Pool house</h2>
+        <p>Challex, Francia. (2024)</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/chalet frances.png" alt="Challet"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Challet</h2>
+        <p>Challex, Francia (2024)</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public//img/Raccard.png" alt="Raccard"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Raccard</h2>
+        <p>Ayer, Suiza (2024)</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Hilario.png" alt="Hilario"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Hilario</h2>
+        <p>Colombia (2022)</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/apto pintuco.png" alt="Pintuco"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Pintuco</h2>
+        <p>Colombia (2022)</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/spirala.png" alt="Spirala"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Spirala</h2>
+        <p>Portugal, (2020) </p>
+        <p>Equipo: Juanita Cuellar, María Barrero + Azuu</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/El hombre de maiz.png" alt="Hombre de Maiz"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Hombre de Maíz </h2>
+        <p>Honda, Tolima. Colombia (2022)</p>
+        <p>Equipo: Maria Ardila, Felipe Langebaek + Azuu</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Tomatera.png" alt="Tomatera"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Tomatera</h2>
+        <p>Victoria, Caldas. Colombia (2023)</p>
+        <p>Equipo: Manuela Silva + Azuu </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/kurandza khanimambo.png" alt="Kurandza Khanimambo"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Kurandza Khanimambo</h2>
+        <p>Mulungo, Mozambique. (2022)</p>
+        <p>Equipo: María Rojas, Paula Pinto + Azuu</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/casa roja.png" alt="Casa roja"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Casa Roja</h2>
+        <p>Totoró, Cauca. Colombia (2021)</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../public/img/Casa dorelo.png" alt="Casa Dorelo"
+        class="w-full h-auto max-h-80 md:max-h-96 lg:max-h-screen object-cover">
+      <div class="carousel-text">
+        <h2 class="text-xl font-bold">Casa Dorelo</h2>
+        <p>Totoró, Cauca. Colombia (2021)</p>
+      </div>
+    </div>
+
+
+    <!-- Controles de navegación -->
+    <button id="prev"
+      class="absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1 z-20 rounded-full hover:bg-opacity-75 lg:-ml-14 md:text-2xl lg:text-3xl">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 md:w-8 md:h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button id="next"
+      class="absolute right-2 md:right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1 z-20 rounded-full hover:bg-opacity-75 lg:-mr-14 md:text-2xl lg:text-3xl">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 md:w-8 md:h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

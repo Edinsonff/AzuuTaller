@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Azuu Taller</title>
+  <link rel="stylesheet" href="../public/css/tailwind.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="bg-gray-900 dark:bg-white overflow-y-auto">
+
+  <!-- Barra de navegación -->
+  <nav class="w-full fixed top-0 z-10 flex justify-between items-center px-4 py-2 bg-gray-900 dark:bg-white shadow-lg">
+    <div class="flex items-center">
+      <img src="../public/img/logo.png" alt="Logo" class="h-12 w-12 mr-2 logo-img">
+      <div class="flex items-baseline">
+        <span class="text-4xl text-white dark:text-black leading-none">Azuu</span>
+        <span class="text-sm text-white dark:text-black ml-1">Taller</span>
+      </div>
+    </div>
+    <div class="flex items-center md:hidden">
+      <button id="toggle" class="mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path class="fill-current text-white dark:text-black" stroke-linecap="round" stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+      </button>
+      <button id="mobile-menu-button" class="text-white hover:text-gray-900 dark:text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden md:flex space-x-4 items-center">
+      <a class="text-md text-white dark:text-black hover:underline" href="landing.html"
+        id="proyectos-link">Proyectos</a>
+      <a href="https://wa.me/573232175634?text=¡Hola! Quiero saber mas acerca de Azuu Taller."
+        class="hover:text-gray-900">
+        <img src="https://img.icons8.com/?size=100&id=85088&format=png&color=FFFFFF" alt="WhatsApp"
+          class="h-6 w-6 dark:filter dark:invert">
+      </a>
+      <a href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr"
+        class="hover:text-gray-900">
+        <img src="https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF" alt="Instagram"
+          class="h-7 w-6 dark:filter dark:invert">
+      </a>
+      <button id="toggle" class="text-white dark:text-black hidden md:block">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path class="fill-current" stroke-linecap="round" stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Modal de navegación móvil -->
+  <div id="mobile-menu" class="modal fixed inset-0 bg-gray-900 dark:bg-white bg-opacity-95 z-20 flex flex-col items-start p-4 md:hidden">
+    <div class="flex justify-between items-center w-full mb-4">
+      <p class="text-2xl text-white font-bold dark:text-black">Azuu Taller</p>
+      <button id="close-mobile-menu" class="text-white hover:text-gray-900 dark:text-gray-700 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <a class="block px-4 py-2 text-lg text-white dark:text-black hover:underline" href="landing.html" id="proyectos-link">Proyectos</a>
+    <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700" href="https://wa.me/573232175634?text=¡Hola! Quiero saber mas acerca de Azuu Taller."><img src="https://img.icons8.com/?size=100&id=85088&format=png&color=FFFFFF" alt="WhatsApp" class="h-6 w-6 inline dark:filter dark:invert"> WhatsApp</a>
+    <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700" href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr"><img src="https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF" alt="Instagram" class="h-7 w-6 inline dark:filter dark:invert"> Instagram</a>
+  </div>
+
+  <!-- Contenido de la página Nosotros -->
+  <div class="flex flex-col md:flex-row w-full max-w-5xl mx-auto relative px-4 text-center mt-24 space-y-8 md:space-y-0 md:space-x-8">
+    <div class="flex-1 text-left">
+      <h2 class="text-3xl md:text-4xl text-white font-bold dark:text-gray-600">Nosotros</h2>
+      <p class="mt-4 text-sm md:text-base text-white dark:text-gray-600 leading-relaxed">Somos una oficina joven, apasionada por la arquitectura, la artesanía, el diseño y las artes en general. Nuestra visión sobre la arquitectura está profundamente comprometida con la calidad de vida, la innovación, la funcionalidad, los contextos, la belleza, la ética y las emociones. Creemos que la arquitectura es una manifestación de arte capaz de potenciar personas, eventos, emociones, comunidades y sueños. Por ello, imprimimos nuestra energía y dedicación en cada idea, garantizando así, proyectos originales y cautivadores que son resultado de la indagación de los anhelos y sueños de nuestros clientes. Asimismo, las energías limpias y renovables son un compromiso en nuestro taller. Pensamos y confiamos en muchas cosas, como el racionamiento de los recursos, en el buen vivir, en el compromiso social de la arquitectura con nuestra gente, nuestra fauna, flora y nuestros paisajes, confiamos en la paz, en nuestra cultura, en la amistad y en el amor. Al final, somos una oficina interesada en comprender diferentes contextos y culturas; por ello, tenemos una proyección global. Nuestra experiencia nos ha permitido desarrollar diversos proyectos residenciales, comerciales, educativos y sanitarios. Lentamente vamos abriendo puertas en diferentes lugares del mundo. Somos, indudablemente, una oficina soñadora.</p>
+      <p class="mt-4 text-sm md:text-base text-white dark:text-gray-600">Azuu taller de arquitectura. 2024</p>
+    </div>
+    <div class="flex-1 flex justify-center items-center">
+      <img src="../public/img/nosotros.png" alt="Miembro del Equipo" class="h-72 w-72 md:h-96 md:w-96 rounded-lg shadow-lg">
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

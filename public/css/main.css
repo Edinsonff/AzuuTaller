@@ -1,0 +1,127 @@
+/* main.css */
+
+/* Definición de las fuentes */
+@font-face {
+  font-family: 'Rovelle\'uno';
+  src: url('../Fonts/RovelleUno-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rovelle\'uno';
+  src: url('../Fonts/RovelleUno-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rovelle\'uno';
+  src: url('../Fonts/RovelleUno-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Rovelle\'uno';
+  src: url('../Fonts/RovelleUno-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Rovelle\'uno';
+  src: url('../Fonts/RovelleUno-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rovelle\'uno';
+  src: url('../Fonts/RovelleUno-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+/* Estilos globales */
+body, html {
+  font-family: 'Rovelle\'uno', sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.carousel-container {
+  height: calc(100% - 4rem);
+  margin-top: 4rem;
+}
+
+.carousel-item {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-item img {
+  transition: none !important; /* Desactivar transiciones en las imágenes del carrusel */
+  animation: none !important; /* Desactivar animaciones en las imágenes del carrusel */
+}
+
+.carousel-text {
+  transition: color 0.5s; /* Aplicar transición solo al texto */
+}
+
+.modal {
+  display: none;
+}
+
+.modal.active {
+  display: block;
+}
+
+.disable-animations * {
+  transition: none !important;
+  animation: none !important;
+}
+
+.logo-img {
+  filter: invert(1); /* Invert colors by default */
+  transition: filter 0.3s ease;
+}
+
+.dark .logo-img {
+  filter: invert(0); /* Do not invert colors in dark mode */
+}
