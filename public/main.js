@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Variables y constantes
     const carouselItems = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
     let firstThemeChange = true;
 
+    // Función para actualizar el carrusel
     const updateCarousel = (index) => {
         carouselItems[currentIndex].classList.remove('active', 'fade-in');
         currentIndex = index;
         carouselItems[currentIndex].classList.add('active', 'fade-in');
     };
 
+    // Controles del carrusel
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
 
@@ -24,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Modo oscuro y claro
     const htmlElement = document.querySelector('html');
     const toggleButtons = document.querySelectorAll('#toggle, #toggle-sm');
     const bodyElement = document.querySelector('body');
@@ -52,16 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleButtons.forEach(button => button.addEventListener('click', toggleDarkMode));
 
+    // Menú móvil
     if (openMobileMenuButton && mobileMenu && closeMobileMenu) {
         openMobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Evita el scroll cuando el menú está abierto
         });
 
         closeMobileMenu.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restaura el scroll cuando el menú está cerrado
         });
     }
 
+    // Enlaces de navegación con efecto de desvanecimiento
     const nosotrosLink = document.getElementById('nosotros-link');
     if (nosotrosLink) {
         nosotrosLink.addEventListener('click', function (e) {
@@ -84,10 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Efecto de desvanecimiento en la carga de la página
     if (document.body.classList.contains('nosotros-page') || document.body.classList.contains('landing-page')) {
         document.body.classList.add('fade-in');
     }
     
+    // Rehabilitar animaciones del carrusel después de la transición
     const reEnableCarouselAnimations = () => {
         carouselItems.forEach(item => {
             item.classList.remove('disable-animations');
@@ -95,3 +105,5 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     document.addEventListener('transitionend', reEnableCarouselAnimations);
 });
+
+
