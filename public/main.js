@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const carouselItems = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
-    let firstThemeChange = true; // Flag to check if it's the first theme change
+    let firstThemeChange = true;
 
     const updateCarousel = (index) => {
         carouselItems[currentIndex].classList.remove('active', 'fade-in');
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMobileMenu = document.getElementById('close-mobile-menu');
     const openMobileMenuButton = document.getElementById('mobile-menu-button');
 
-
     const toggleDarkMode = () => {
         if (firstThemeChange) {
             bodyElement.classList.add('disable-animations');
@@ -42,7 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
             htmlElement.classList.toggle('dark');
             document.body.classList.remove('fade-out');
             document.body.classList.add('fade-in');
-
+            if (firstThemeChange) {
+                setTimeout(() => {
+                    bodyElement.classList.remove('disable-animations');
+                    firstThemeChange = false;
+                }, 0);
+            }
         }, 500);
     };
 
@@ -64,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             document.body.classList.add('fade-out');
             setTimeout(() => {
-                window.location.href = 'nosotros.html';
+                window.location.href = './Nosotros.html';
             }, 1000);
         });
     }
@@ -75,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             document.body.classList.add('fade-out');
             setTimeout(() => {
-                window.location.href = 'landing.html';
+                window.location.href = './index.html';
             }, 1000);
         });
     }
@@ -83,4 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('nosotros-page') || document.body.classList.contains('landing-page')) {
         document.body.classList.add('fade-in');
     }
+    
+    const reEnableCarouselAnimations = () => {
+        carouselItems.forEach(item => {
+            item.classList.remove('disable-animations');
+        });
+    };
+    document.addEventListener('transitionend', reEnableCarouselAnimations);
 });

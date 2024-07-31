@@ -4,7 +4,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./src/tailwind.css -o ./public/css/tailwind.css --watch"
+    "dev": "tailwindcss -i ./src/tailwind.css -o ./public/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/tailwind.css -o ./public/css/tailwind.css"
   },
   "author": "",
   "license": "ISC",
