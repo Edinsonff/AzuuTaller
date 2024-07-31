@@ -163,4 +163,3 @@ body, .modal a {
 .dark .logo-img {
   filter: invert(0); /* Do not invert colors in dark mode */
 }
-
