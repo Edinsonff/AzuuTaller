@@ -1,6 +1,8 @@
 /* main.css */
 
+/* ======================= */
 /* Definición de las fuentes */
+/* ======================= */
 @font-face {
   font-family: 'Rovelle\'uno';
   src: url('../Fonts/RovelleUno-Regular.otf') format('opentype');
@@ -43,7 +45,9 @@
   font-style: italic;
 }
 
+/* ======================= */
 /* Animaciones */
+/* ======================= */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -70,18 +74,45 @@
   animation: fadeIn 1s forwards;
 }
 
+.disable-animations * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* ======================= */
 /* Estilos globales */
+/* ======================= */
 body, html {
   font-family: 'Rovelle\'uno', sans-serif;
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden; /* Asegura que no haya desbordamiento horizontal */
   transition: background-color 0.5s, color 0.5s;
 }
 
+a, a:visited, a:hover, a:active {
+  color: inherit; /* Mantiene el color heredado de su padre */
+  text-decoration: none; /* Evita subrayados u otras decoraciones */
+}
+
+/* ======================= */
+/* Estilos del carrusel */
+/* ======================= */
 .carousel-container {
   height: calc(100% - 4rem);
   margin-top: 4rem;
+  position: relative; /* Necesario para posicionar las flechas relativas al contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container button {
+  display: block; /* Mostrar botones por defecto */
+}
+
+#mobile-menu.active ~ .carousel-container button {
+  display: none; /* Ocultar botones cuando el menú móvil está activo */
 }
 
 .carousel-item {
@@ -104,17 +135,24 @@ body, html {
   transition: color 0.5s; /* Aplicar transición solo al texto */
 }
 
+/* ======================= */
+/* Estilos del modal de navegación móvil */
+/* ======================= */
 .modal {
   display: none;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal.active {
   display: block;
 }
 
-.disable-animations * {
-  transition: none !important;
-  animation: none !important;
+body, .modal a {
+  color: white;
+}
+
+.dark body, .dark .modal a {
+  color: black;
 }
 
 .logo-img {
