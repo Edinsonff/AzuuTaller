@@ -7,14 +7,15 @@
   <title>Nosotros - Azuu Taller</title>
   <link rel="stylesheet" href="./css/tailwind.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="./img/logo.png" type="image/png">
 </head>
 
 <body class="bg-gray-900 dark:bg-white overflow-y-auto">
 
   <!-- Barra de navegación -->
-  <nav class="w-full fixed top-0 z-10 flex justify-between items-center px-4 py-2 bg-gray-900 dark:bg-white shadow-lg">
+  <header class="w-full fixed top-0 z-10 flex justify-between items-center px-4 py-2 bg-gray-900 dark:bg-white shadow-lg">
     <div class="flex items-center">
-      <img src="./img/logo.png" alt="Logo" class="h-15 w-12 mr-2 logo-img">
+      <img src="./img/logo.png" alt="Logo de Azuu Taller" class="h-15 w-12 mr-2 logo-img">
       <div class="flex">
         <span class="text-sm text-white dark:text-black">AZUU</span>
       </div>
@@ -34,20 +35,19 @@
         </svg>
       </button>
     </div>
-    <div class="hidden md:flex space-x-4 items-center">
+    <nav class="hidden md:flex space-x-4 items-center">
       <a class="text-sm text-white dark:text-black hover:underline" href="./index.html" id="proyectos-link">PROYECTOS</a>
-      <a href="https://wa.me/573232175634?text=¡Hola! Me gustaría saber más acerca de Azuu Taller."
+      <a href="https://wa.me/573232175634?text=¡Hola! Me gustaría saber más acerca de Azuu Taller." target="_blank"
         class="hover:text-gray-900">
         <img src="https://img.icons8.com/?size=100&id=85088&format=png&color=FFFFFF" alt="WhatsApp"
           class="h-6 w-6 dark:filter dark:invert">
       </a>
-      <a href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr"
+      <a href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr" target="_blank"
         class="hover:text-gray-900">
         <img src="https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF" alt="Instagram"
           class="h-7 w-6 dark:filter dark:invert">
       </a>
-      <a href="mailto:equipo@azuutaller.com"
-        class="hover:text-gray-900">
+      <a href="mailto:equipo@azuutaller.com" target="_blank" class="hover:text-gray-900">
         <img src="https://img.icons8.com/?size=100&id=86840&format=png&color=FFFFFF" alt="Gmail"
           class="h-7 w-6 dark:filter dark:invert">
       </a>
@@ -58,8 +58,8 @@
             d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
         </svg>
       </button>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <!-- Modal de navegación móvil -->
   <div id="mobile-menu"
@@ -76,34 +76,36 @@
     <a class="block px-4 py-2 text-lg text-white dark:text-black hover:underline" href="./index.html"
       id="proyectos-link">Proyectos</a>
     <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700"
-      href="https://wa.me/573232175634?text=¡Hola! Quiero saber mas acerca de Azuu Taller."><img
+      href="https://wa.me/573232175634?text=¡Hola! Quiero saber más acerca de Azuu Taller." target="_blank"><img
         src="https://img.icons8.com/?size=100&id=85088&format=png&color=FFFFFF" alt="WhatsApp"
         class="h-6 w-6 inline dark:filter dark:invert"> WhatsApp</a>
     <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700"
-      href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr"><img
+      href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr" target="_blank"><img
         src="https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF" alt="Instagram"
         class="h-7 w-6 inline dark:filter dark:invert"> Instagram</a>
-        <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700"
-        href="mailto:equipo@azuutaller.com"><img
-          src="https://img.icons8.com/?size=100&id=86840&format=png&color=FFFFFF" alt="Instagram"
-          class="h-7 w-6 inline dark:filter dark:invert"> equipo@azuutaller.com</a>
-        
+    <a class="block px-4 py-2 text-white hover:text-gray-900 dark:text-gray-700" href="mailto:equipo@azuutaller.com"
+      target="_blank"><img src="https://img.icons8.com/?size=100&id=86840&format=png&color=FFFFFF" alt="Gmail"
+        class="h-7 w-6 inline dark:filter dark:invert"> equipo@azuutaller.com</a>
   </div>
 
   <!-- Contenido de la página Nosotros -->
-  <div class="flex flex-col md:flex-row w-full max-w-5xl mx-auto relative px-4 text-center mt-24 space-y-8 md:space-y-0 md:space-x-8">
-    <div class="flex-1 text-justify">
+  <main class="flex flex-col md:flex-row w-full max-w-5xl mx-auto relative px-4 text-center mt-24 space-y-8 md:space-y-0 md:space-x-8">
+    <section class="flex-1 text-justify">
       <h2 class="text-3xl md:text-4xl text-white font-bold dark:text-gray-600">Nosotros</h2>
       <p class="mt-4 text-sm md:text-sm text-white dark:text-gray-600 leading-relaxed">Somos una oficina joven, apasionada por la arquitectura, la artesanía, el diseño y las artes en general. Nuestra visión sobre la arquitectura está profundamente comprometida con la calidad de vida, la innovación, la funcionalidad, los contextos, la belleza, la ética y las emociones. Creemos que la arquitectura es una manifestación de arte capaz de potenciar personas, eventos, emociones, comunidades y sueños. Por ello, imprimimos nuestra energía y dedicación en cada idea, garantizando así, proyectos originales y cautivadores que son resultado de la indagación de los anhelos y sueños de nuestros clientes.</p>
 
-      <p class="mt-4 text-sm md:text-sm text-white dark:text-gray-600 leading-relaxed"> Asimismo, las energías limpias y renovables son un compromiso en nuestro taller. Pensamos y confiamos en muchas cosas, como el racionamiento de los recursos, en el buen vivir, en el compromiso social de la arquitectura con nuestra gente, nuestra fauna, flora y nuestros paisajes, confiamos en la paz, en nuestra cultura, en la amistad y en el amor. Al final, somos una oficina interesada en comprender diferentes contextos y culturas; por ello, tenemos una proyección global. Nuestra experiencia nos ha permitido desarrollar diversos proyectos residenciales, comerciales, educativos y sanitarios. Lentamente vamos abriendo puertas en diferentes lugares del mundo. Somos, indudablemente, una oficina soñadora</p>
-      <p class="mt-4 text-sm md:text-sm text-white italic dark:text-gray-600 ">Azuu taller de arquitectura. 2024</p>
-    </div>
-    <div class="flex-1 flex justify-center items-center flex-col">
-      <img src="./img/nosotros.png" alt="Miembro del Equipo" class="h-60 w-72 md:h-80 md:w-96 lg:mt-5 rounded-lg shadow-lg">
+      <p class="mt-4 text-sm md:text-sm text-white dark:text-gray-600 leading-relaxed">Asimismo, las energías limpias y renovables son un compromiso en nuestro taller. Pensamos y confiamos en muchas cosas, como el racionamiento de los recursos, en el buen vivir, en el compromiso social de la arquitectura con nuestra gente, nuestra fauna, flora y nuestros paisajes, confiamos en la paz, en nuestra cultura, en la amistad y en el amor. Al final, somos una oficina interesada en comprender diferentes contextos y culturas; por ello, tenemos una proyección global. Nuestra experiencia nos ha permitido desarrollar diversos proyectos residenciales, comerciales, educativos y sanitarios. Lentamente vamos abriendo puertas en diferentes lugares del mundo. Somos, indudablemente, una oficina soñadora</p>
+      <p class="mt-4 text-sm md:text-sm text-white italic dark:text-gray-600">Azuu taller de arquitectura. 2024</p>
+    </section>
+    <section class="flex-1 flex justify-center items-center flex-col">
+      <div class="image-container">
+        <img src="./img/nosotros.png" alt="Miembro del Equipo" class="h-60 w-72 md:h-80 md:w-96 lg:mt-5 rounded-lg shadow-lg image">
+        <button class="fullscreen-button" onclick="openFullscreen(this.previousElementSibling)">Pantalla completa</button>
+      </div>
       <p class="text-center text-sm text-white dark:text-gray-600 mt-2 mb-3">Jean Rodriguez & Carlos Perez</p>
-    </div>
-  </div>
+    </section>
+    
+  </main>
 
   <script src="./main.js"></script>
 </body>
