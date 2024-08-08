@@ -90,10 +90,6 @@ body, html {
   transition: background-color 0.5s, color 0.5s;
 }
 
-a, a:visited, a:hover, a:active {
-  color: inherit; /* Mantiene el color heredado de su padre */
-  text-decoration: none; /* Evita subrayados u otras decoraciones */
-}
 
 /* ======================= */
 /* Estilos del carrusel */
@@ -138,22 +134,6 @@ a, a:visited, a:hover, a:active {
 /* ======================= */
 /* Estilos del modal de navegación móvil */
 /* ======================= */
-.modal {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal.active {
-  display: block;
-}
-
-body, .modal a {
-  color: white;
-}
-
-.dark body, .dark .modal a {
-  color: black;
-}
 
 .logo-img {
   filter: invert(1); /* Invert colors by default */
@@ -162,4 +142,9 @@ body, .modal a {
 
 .dark .logo-img {
   filter: invert(0); /* Do not invert colors in dark mode */
+}
+
+.modal-active #prev,
+.modal-active #next {
+  display: none;
 }

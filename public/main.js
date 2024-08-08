@@ -32,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleButtons = document.querySelectorAll('#toggle, #toggle-sm');
     const bodyElement = document.querySelector('body');
     const mobileMenu = document.getElementById('mobile-menu');
-    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    const closeMobileMenuButton = document.getElementById('close-mobile-menu');
     const openMobileMenuButton = document.getElementById('mobile-menu-button');
+
 
     const toggleDarkMode = () => {
         if (firstThemeChange) {
@@ -57,18 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButtons.forEach(button => button.addEventListener('click', toggleDarkMode));
 
     // Menú móvil
-    if (openMobileMenuButton && mobileMenu && closeMobileMenu) {
-        openMobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Evita el scroll cuando el menú está abierto
-        });
+    const openMobileMenu = () => {
+        mobileMenu.classList.remove('hidden');
+        document.body.classList.add('modal-active');
+        document.body.style.overflow = 'hidden'; 
+    };
 
-        closeMobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Restaura el scroll cuando el menú está cerrado
-        });
+    const closeMobileMenu = () => {
+        mobileMenu.classList.add('hidden');
+        document.body.classList.remove('modal-active');
+        document.body.style.overflow = 'auto'; 
+    };
+
+    if (openMobileMenuButton && mobileMenu && closeMobileMenuButton) {
+        openMobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenuButton.addEventListener('click', closeMobileMenu);
     }
-
     // Enlaces de navegación con efecto de desvanecimiento
     const nosotrosLink = document.getElementById('nosotros-link');
     if (nosotrosLink) {
@@ -104,6 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     document.addEventListener('transitionend', reEnableCarouselAnimations);
+
+
 });
-
-
