@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="flex items-center md:hidden">
-      <button id="toggle" class="mr-4">
+      <button id="toggle" class="mr-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-6 h-6">
           <path class="fill-current text-white dark:text-black" stroke-linecap="round" stroke-linejoin="round"
@@ -35,63 +35,82 @@
         </svg>
       </button>
     </div>
+
     <nav class="hidden md:flex space-x-4 items-center">
-      <a class=" hover:underline" href="/public/Nosotros.html"
-        id="nosotros-link">
-        <img src="https://img.icons8.com/?size=100&id=z4ZbAA3hfmxP&format=png&color=FFFFFF" class="h-6 w-6 dark:invert dark:filter" alt="Nosotros">
-        </a>
+      <a class="hover:underline" href="/public/Nosotros.html" id="nosotros-link">
+        <img src="https://img.icons8.com/?size=100&id=z4ZbAA3hfmxP&format=png&color=FFFFFF"
+          class="icon-class dark:invert dark:filter" alt="Nosotros">
+      </a>
       <a href="https://wa.me/573232175634?text=¡Hola! Me gustaría saber más acerca de Azuu Taller." target="_blank"
         class="hover:text-gray-900">
         <img src="https://img.icons8.com/?size=100&id=16712&format=png&color=FFFFFF" alt="WhatsApp"
-          class="h-6 w-6 dark:filter dark:invert">
+          class="icon-class dark:invert dark:filter">
       </a>
       <a href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr" target="_blank"
         class="hover:text-gray-900">
         <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=FFFFFF" alt="Instagram"
-          class="h-6 w-6 dark:filter dark:invert">
+          class="icon-class dark:invert dark:filter">
       </a>
       <a href="mailto:equipo@azuutaller.com" class="hover:text-gray-900">
         <img src="https://img.icons8.com/?size=100&id=53388&format=png&color=FFFFFF" alt="Gmail"
-          class="h-6 w-6 dark:filter dark:invert">
+          class="icon-class dark:invert dark:filter">
       </a>
       <button id="toggle" class="text-white dark:text-black hidden md:block">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-6 h-6">
+          class="icon-class">
           <path class="fill-current" stroke-linecap="round" stroke-linejoin="round"
             d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
         </svg>
       </button>
+      <button id="change-language" class="cursor-pointer  text-white dark:filter dark:invert">
+        ENG
+      </button>
     </nav>
+
   </header>
 
   <!-- Modal de navegación móvil -->
-  <div id="mobile-menu" class="modal fixed inset-0 bg-gray-900 dark:bg-white bg-opacity-95 dark:bg-opacity-95 z-20 flex items-center justify-center p-4 md:hidden hidden">
+  <div id="mobile-menu"
+    class="modal fixed inset-0 bg-gray-900 dark:bg-white bg-opacity-95 dark:bg-opacity-95 z-20 flex items-center justify-center p-4 md:hidden hidden">
     <div class="w-full max-w-md bg-gray-800 dark:bg-gray-200 rounded-lg shadow-2xl p-6">
       <div class="flex justify-between items-center w-full mb-6">
         <p class="text-2xl font-bold text-white dark:text-gray-600">Azuu Taller</p>
-        <button id="close-mobile-menu" class="text-white dark:text-black hover:text-gray-900 dark:hover:text-gray-700 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <button id="close-mobile-menu"
+          class="text-white dark:text-black hover:text-gray-900 dark:hover:text-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-8 h-8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
       <nav class="flex flex-col space-y-4">
-        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded" href="./Nosotros.html" id="nosotros-link">
-          <img src="https://img.icons8.com/?size=100&id=z4ZbAA3hfmxP&format=png&color=FFFFFF" class="h-7 w-7 mr-1 dark:invert dark:filter" alt="Nosotros">
+        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded"
+          href="./Nosotros.html" id="nosotros-link">
+          <img src="https://img.icons8.com/?size=100&id=z4ZbAA3hfmxP&format=png&color=FFFFFF"
+            class="h-6 w-6 mr-2 dark:invert dark:filter" alt="Nosotros">
           Nosotros
         </a>
-        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded" href="https://wa.me/573232175634?text=¡Hola! Quiero saber más acerca de Azuu Taller." target="_blank">
-          <img src="https://img.icons8.com/?size=100&id=16712&format=png&color=FFFFFF" alt="WhatsApp" class="h-6 w-6 mr-2 dark:filter dark:invert">
+        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded"
+          href="https://wa.me/573232175634?text=¡Hola! Quiero saber más acerca de Azuu Taller." target="_blank">
+          <img src="https://img.icons8.com/?size=100&id=16712&format=png&color=FFFFFF" alt="WhatsApp"
+            class="h-6 w-6 mr-2 dark:filter dark:invert">
           WhatsApp
         </a>
-        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded" href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr" target="_blank">
-          <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=FFFFFF" alt="Instagram" class="h-6 w-6 mr-2 dark:filter dark:invert">
+        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded"
+          href="https://www.instagram.com/azuu_taller?igsh=MWN4ZXd2NThiY29hdw%3D%3D&utm_source=qr" target="_blank">
+          <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=FFFFFF" alt="Instagram"
+            class="h-6 w-6 mr-2 dark:filter dark:invert">
           Instagram
         </a>
-        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded" href="mailto:equipo@azuutaller.com" target="_blank">
-          <img src="https://img.icons8.com/?size=100&id=53388&format=png&color=FFFFFF" alt="Gmail" class="h-6 w-6 mr-2 dark:filter dark:invert">
+        <a class="flex items-center px-4 py-2 text-md text-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 rounded"
+          href="mailto:equipo@azuutaller.com" target="_blank">
+          <img src="https://img.icons8.com/?size=100&id=53388&format=png&color=FFFFFF" alt="Gmail"
+            class="h-6 w-6 mr-2 dark:filter dark:invert">
           equipo@azuutaller.com
         </a>
+        <button id="change-language" class="cursor-pointer text-sm text-white dark:filter dark:invert mr-2">
+          ENG
+        </button>
       </nav>
     </div>
   </div>
@@ -230,7 +249,8 @@
       <div class="carousel-text mt-4 text-center">
         <h2 class="text-base md:text-lg text-white font-bold dark:text-gray-700">Spirala</h2>
         <p class="text-xs md:text-sm text-white dark:text-gray-600">Portugal, (2020)</p>
-        <p class="text-xs md:text-sm text-white dark:text-gray-600">Equipo: Juanita Cuellar, María Barrero + Azuu</p>
+        <p class="team  text-xs md:text-sm text-white dark:text-gray-600">Equipo: Juanita Cuellar, María Barrero + Azuu
+        </p>
       </div>
     </div>
 
@@ -240,7 +260,8 @@
       <div class="carousel-text mt-4 text-center">
         <h2 class="text-base md:text-lg text-white font-bold dark:text-gray-700">Hombre de Maíz</h2>
         <p class="text-xs md:text-sm text-white dark:text-gray-600">Honda, Tolima. Colombia (2022)</p>
-        <p class="text-xs md:text-sm text-white dark:text-gray-600">Equipo: Maria Ardila, Felipe Langebaek + Azuu</p>
+        <p class="team  text-xs md:text-sm text-white dark:text-gray-600">Equipo: Maria Ardila, Felipe Langebaek + Azuu
+        </p>
       </div>
     </div>
 
@@ -250,7 +271,7 @@
       <div class="carousel-text mt-4 text-center">
         <h2 class="text-base md:text-lg text-white font-bold dark:text-gray-700">Tomatera</h2>
         <p class="text-xs md:text-sm text-white dark:text-gray-600">Victoria, Caldas. Colombia (2023)</p>
-        <p class="text-xs md:text-sm text-white dark:text-gray-600">Equipo: Manuela Silva + Azuu</p>
+        <p class="team  text-xs md:text-sm text-white dark:text-gray-600">Equipo: Manuela Silva + Azuu</p>
       </div>
     </div>
 
@@ -260,7 +281,7 @@
       <div class="carousel-text mt-4 text-center">
         <h2 class="text-base md:text-lg text-white font-bold dark:text-gray-700">Kurandza Khanimambo</h2>
         <p class="text-xs md:text-sm text-white dark:text-gray-600">Mulungo, Mozambique. (2022)</p>
-        <p class="text-xs md:text-sm text-white dark:text-gray-600">Equipo: María Rojas, Paula Pinto + Azuu</p>
+        <p class="team  text-xs md:text-sm text-white dark:text-gray-600">Equipo: María Rojas, Paula Pinto + Azuu</p>
       </div>
     </div>
 
@@ -297,6 +318,7 @@
         alt="Flecha hacia la derecha">
     </button>
   </main>
+  <script src="./translations.js"></script>
   <script src="./main.js"></script>
 </body>
 

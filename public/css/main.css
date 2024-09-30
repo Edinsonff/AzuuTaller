@@ -48,30 +48,27 @@
 /* ======================= */
 /* Animaciones */
 /* ======================= */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 1s forwards;
+}
+
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
+  to { 
     opacity: 1;
   }
 }
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
   to {
     opacity: 0;
   }
-}
-
-.fade-out {
-  animation: fadeOut 1s forwards;
-}
-
-.fade-in {
-  animation: fadeIn 1s forwards;
 }
 
 .disable-animations * {
@@ -86,8 +83,37 @@ body, html {
   font-family: 'Rovelle\'uno', sans-serif;
   height: 100%;
   margin: 0;
-  overflow-x: hidden; /* Asegura que no haya desbordamiento horizontal */
+  overflow-x: hidden;
   transition: background-color 0.5s, color 0.5s;
+}
+
+.icon-class {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.3s ease, color 0.3s ease;
+}
+
+.icon-class img,
+.icon-class svg {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-wrapper {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 
@@ -97,18 +123,18 @@ body, html {
 .carousel-container {
   height: calc(100% - 4rem);
   margin-top: 4rem;
-  position: relative; /* Necesario para posicionar las flechas relativas al contenedor */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .carousel-container button {
-  display: block; /* Mostrar botones por defecto */
+  display: block; 
 }
 
 #mobile-menu.active ~ .carousel-container button {
-  display: none; /* Ocultar botones cuando el menú móvil está activo */
+  display: none;
 }
 
 .carousel-item {
@@ -123,12 +149,12 @@ body, html {
 }
 
 .carousel-item img {
-  transition: none !important; /* Desactivar transiciones en las imágenes del carrusel */
-  animation: none !important; /* Desactivar animaciones en las imágenes del carrusel */
+  transition: none !important;
+  animation: none !important;
 }
 
 .carousel-text {
-  transition: color 0.5s; /* Aplicar transición solo al texto */
+  transition: color 0.5s;
 }
 
 /* ======================= */
@@ -136,12 +162,12 @@ body, html {
 /* ======================= */
 
 .logo-img {
-  filter: invert(1); /* Invert colors by default */
+  filter: invert(1);
   transition: filter 0.3s ease;
 }
 
 .dark .logo-img {
-  filter: invert(0); /* Do not invert colors in dark mode */
+  filter: invert(0);
 }
 
 .modal-active #prev,
